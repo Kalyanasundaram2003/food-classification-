@@ -1,0 +1,16 @@
+food,serving size (g),calories,protein (g),carbs (g),fat (g),fiber (g),sugar (g),sodium (mg),calcium (mg),iron (mg),vitamin c (mg),Food_items
+badusha,150,450,5,60,20,1,30,200,50,1.5,0,badusha
+chapati,150,360,9,60,9,9,0,300,20,2,0,chapati
+cup_cakes,150,450,5,60,20,1,40,300,30,1.2,0,cup_cakes
+curd rice,150,200,6,30,5,0.5,4,500,150,0.5,1,curd rice
+dosa,150,315,9,55.5,7.5,3,0,600,30,2,0,dosa
+gulab jamun,150,450,6,60,20,0,45,150,100,0.5,0,gulab jamun
+french_fries,150,450,5,60,20,5,0,400,15,1,10,french_fries
+idly,150,225,6,45,1.5,3,0,15,10,0.5,0,idly
+jalaebi,150,450,4,75,15,0.5,45,100,20,0.7,0,jalaebi
+kaju katli,150,600,12,60,36,3,45,50,40,2.5,0,kaju katli
+laddu,150,500,8,60,25,2,40,200,50,1.5,0,laddu
+lemon rice,150,270,5,45,7.5,2,0,600,30,1,15,lemon rice
+mysore pak,150,600,8,60,36,1,45,100,30,1,0,mysore pak
+samosa,150,360,6,45,18,3,2,400,20,1.2,5,samosa
+waffles,150,400,8,60,15,2,20,500,100,2,0,waffles

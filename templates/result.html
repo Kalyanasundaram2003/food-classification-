@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="result">
+        <img src="{{ url_for('static', filename='uploads/' + image_filename) }}" alt="Uploaded Image">
+        <h2><strong>Prediction:</strong> {{ prediction }}</h2>
+
+        {% if nutrition %}
+        <div class="nutrition-card">
+            <h3>Nutritional Information:</h3>
+            <ul>
+                {% for key, value in nutrition.items() %}
+                    <li><strong>{{ key|capitalize }}:</strong> {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% else %}
+        <p>No nutritional data available for this item.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

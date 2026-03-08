@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foodie Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>👨‍🍳 Foodie Hub</h1>
+    </header>
+    <main>
+        <h2>Welcome to Food Classification and Nutritional System</h2>
+        <p>This project uses deep learning to classify food images and provide detailed nutritional information
+           for each item. By uploading an image, you’ll get instant predictions and nutrition facts per serving.</p>
+        <p>It helps users make informed dietary decisions and promotes healthy eating habits. The system
+          is designed to support 15 common food items with accurate data mapping</p>
+      
+        <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+            <div class="upload-box">
+                <input type="file" name="image" id="image">
+                <label for="image" class="btn">Choose File</label>
+                <button type="submit" class="btn">Continue</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>© 2025 Foodie Hub | Created by Your Team</p>
+    </footer>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function(e) {
+            const fileInput = document.getElementById("image");
+            if (!fileInput.files.length) {
+                e.preventDefault();
+                alert("Please select a file before continuing.");
+            } else {
+                alert("File uploaded successfully! Processing your image...");
+            }
+        });
+    </script>
+</body>
+</html>
