@@ -5,11 +5,21 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import pandas as pd
+import gdown
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
-model = load_model('best_model.h5')
+# Download model from Google Drive if not exists
+MODEL_PATH = 'best_model.h5'
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from Google Drive...")
+    gdown.download(
+        'https://drive.google.com/uc?id=1g78hbXUQaaohEtJbfvA7huhKJz1TVeN4',
+        MODEL_PATH, quiet=False
+    )
+
+model = load_model(MODEL_PATH)
 nutrition_df = pd.read_csv('final_corrected_nutrition.csv')
 
 class_names = ['badusha', 'chapati', 'cup_cakes', 'curd rice', 'dosa',
@@ -62,4 +72,4 @@ def predict():
                            nutrition=nutrition_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
